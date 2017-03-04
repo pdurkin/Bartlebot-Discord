@@ -42,10 +42,19 @@ namespace Bartlebot
 
         private void RegisterCommands()
         {
+            // !memes
             commands.CreateCommand("memes").Do(async (e) =>
                 {
                     await e.Channel.SendMessage("fuck off Jon");
                 });
+
+            // !b4b
+            commands.CreateCommand("b4b").Do(async (e) =>
+            {
+                await e.Channel.SendFile("kermit2.png");
+            });
+
+            //add more commands???
         }
 
         private void Log(object sender, LogMessageEventArgs e)
